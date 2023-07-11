@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: sorted was quick, but random and reversed were slow because of switching the positions
+
+sort2 uses: merge sort
+
+How do you know?: because the random ordered array was sorted significantly faster due to the big O of n log n
+
+sort3 uses: selection sort
+
+How do you know?: because it still has to iterate through all items on the sorted array

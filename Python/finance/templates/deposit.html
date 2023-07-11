@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/deposit" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" id="depositType" name="depositType">
+                <option disabled selected>Deposit Type</option>
+                <option value="Wire Transfer">Wire Transfer</option>
+                <option value="Paypal">Paypal</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Bitcoin">Bitcoin</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" id="amount" name="amount" placeholder="amount" type="number">
+        </div>
+        <button class="btn btn-primary" type="submit">Deposit</button>
+    </form>
+    
+{% endblock %}

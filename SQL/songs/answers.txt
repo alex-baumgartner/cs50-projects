@@ -1,0 +1,2 @@
+By averaging energy, valence and danceabilty of all songs and using the results to calculate the aura.
+Since outliers could skew the values - to better calculate this aura, one could group the songs into genres and calculate the aura this way.

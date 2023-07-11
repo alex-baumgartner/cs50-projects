@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                // correct answer
+                let correctAnswer = document.querySelector('.correct');
+                correctAnswer.addEventListener('click', function() {
+                    correctAnswer.style.backgroundColor = 'green';
+                    document.querySelector('#resultSection').innerHTML = 'Correct!';
+                });
+
+                // incorrect answer
+                let incorrectAnswers = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrectAnswers.length; i++) {
+                    incorrectAnswers[i].addEventListener('click', function() {
+                        incorrectAnswers[i].style.backgroundColor = 'red';
+                        document.querySelector('#resultSection').innerHTML = 'Incorrect!';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let answerField = document.querySelector('input');
+                    if (answerField.value === 'Max Verstappen') {
+                        answerField.style.backgroundColor = 'green';
+                        document.querySelectory('#resultSection2').innerHTML = 'Correct!';
+                    } else {
+                        answerField.style.backgroundColor = 'red';
+                        document.querySelectory('#resultSection2').innerHTML = 'Incorrect!';
+                    }
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <h3>Who won the 2020 Italian F1 Grand Prix?</h3>
+
+                <button class="incorrect">Lewis Hamilton</button>
+                <button class="incorrect">Max Verstappen</button>
+                <button class="incorrect">Carlos Sainz</button>
+                <button class="correct">Pierre Gasly</button>
+
+                <p id="resultSection"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Who won the 2021 F1 Driver's Championship?</h3>
+                <input type="text"></input>
+                <button id="check"> Check answer</button>
+                <p id="resultSection2"></p>
+            </div>
+        </div>
+    </body>
+</html>

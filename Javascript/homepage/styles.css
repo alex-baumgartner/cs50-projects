@@ -1,0 +1,102 @@
+.large {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .medium {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .small {
+    font-size: 20px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  #hobbies {
+    padding-left: 50px;
+  }
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #003080;
+}
+
+/* list stylings */
+ul {
+  list-style-type: disc;
+  padding-left: 80px;
+  text-align: left;
+}
+
+ol {
+  list-style-type: decimal; /* Use decimal numbers for list items */
+  padding-left: 50px; /* Add some left padding to create indentation */
+}
+
+ul > li {
+  margin-bottom: 8px;
+}
+
+ul > li {
+  padding-left: 40px; /* Create additional indentation for individual workplaces */
+}
+
+ol > li {
+  margin-bottom: 10px; /* Add vertical spacing between list items */
+}
+
+ol > li:last-child {
+  margin-bottom: 0; /* Remove bottom margin from the last list item */
+}
+
+ol > li > h2 {
+  font-size: 36px; /* Set a font size for the heading within list items */
+  margin-bottom: 5px; /* Add some spacing below the heading */
+}
+
+/* table stylings */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table th {
+  background-color: #f5f5f5;
+}
