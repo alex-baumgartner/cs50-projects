@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Spending Statistics
+{% endblock %}
+
+{% block main %}
+    <h2>Top 3 Spending Categories</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for category in top_categories %}
+                <tr>
+                    <td>{{ category['category'] }}</td>
+                    <td>{{ category['total_amount'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Top 3 Spending Months</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Month</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for month in top_months %}
+                <tr>
+                    <td>{{ month['month'] }}</td>
+                    <td>{{ month['total_amount'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit expense
+{% endblock %}
+
+{% block main %}
+    <form action="/expense-edit/{{ expense['id'] }}" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" id="category" name="category">
+                <option value="{{ expense['category_id'] }}" selected>{{ expense['category'] }}</option>
+                {% for category in categories %}
+                <option value="{{ category['id'] }}">{{ category['name'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="date" name="date" type="date" value="{{ expense['date'] }}">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" id="amount" name="amount" min="0" step="0.01" type="number" value="{{ expense['amount'] }}">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control mx-auto w-auto" id="description" name="description" rows="4">{{ expense['description'] }}</textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Edit expense</button>
+    </form>
+{% endblock %}

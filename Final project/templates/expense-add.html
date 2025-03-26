@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add expense
+{% endblock %}
+
+{% block main %}
+    <form action="/expense-add" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" id="category" name="category">
+                <option disabled selected>Category</option>
+                {% for category in categories %}
+                <option value="{{ category['id'] }}">{{ category['name'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="date" name="date" type="date" value="{{ currentDate.strftime('%Y-%m-%d') }}">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto" id="amount" name="amount" min="0" step="0.01" placeholder="Amount" type="number">
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control mx-auto w-auto" id="description" name="description" rows="4" placeholder="Description"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Add expense</button>
+    </form>
+{% endblock %}

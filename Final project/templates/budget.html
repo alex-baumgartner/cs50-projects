@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Set monthly budget
+{% endblock %}
+
+{% block main %}
+    <form action="/budget" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="budget"
+            name="budget" placeholder="Montlhy budget" type="number" min="1">
+        </div>
+        <button class="btn btn-primary" type="submit">Set budget</button>
+    </form>
+{% endblock %}

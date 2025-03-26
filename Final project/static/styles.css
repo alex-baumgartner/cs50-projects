@@ -1,0 +1,18 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.scrollable {
+    height: 540px;
+    overflow: auto;
+}
+
+.background-gray {
+    background-color: lightgray;
+}

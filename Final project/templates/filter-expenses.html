@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Filter expenses by date and/or category
+{% endblock %}
+
+{% block main %}
+    <form action="/filter-expenses" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" id="category" name="category">
+                <option disabled selected>Category</option>
+                {% for category in categories %}
+                <option value="{{ category['id'] }}">{{ category['name'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="dateFrom" name="dateFrom" type="date">
+            <input class="form-control mx-auto w-auto" id="dateTo" name="dateTo" type="date">
+        </div>
+        <button class="btn btn-primary" type="submit">Filter expenses</button>
+    </form>
+{% endblock %}
