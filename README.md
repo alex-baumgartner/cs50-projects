@@ -1,4 +1,4 @@
-# Expense Tracking Application
+# Expense Tracking Application (Final project)
 #### Video Demo:  <https://youtu.be/15sI52392go>
 
 ## Description:
